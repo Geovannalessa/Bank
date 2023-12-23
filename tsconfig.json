@@ -1,0 +1,15 @@
+//arquivo de configuração do typescript
+{
+    //opções de compilação
+    "compilerOptions": {
+        //o diretorio que será considerado para gravar o arquivos resultantes
+        "outDir": "dist/js",
+        //ts quando voce for converter seus arquivos ts converte para o EcmaScript 5...
+        "target": "ES6",
+        //programador, você diz que você quer que eu gere os arquivos na pasta "dist", que converta os arquivos TypeScript para ECMAScript 6, mas qual é os arquivos, onde estão os arquivos que você quer que eu leia?
+        "noEmitOnError": true //não vai gerar um arquivo js enquanto o ts estiver com problemas, evita de gerar um arquivo js com problemas
+    },
+    //compilador, inclui aí para mim a pasta "app"
+    "include": ["app/**/*"]
+    //toda subpasta e qualquer arquivo, tudo que tiver dentro da "app", que for ".ts" eu quero que você converte e jogue na pasta "dist.js"".
+}
