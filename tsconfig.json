@@ -7,7 +7,8 @@
         //ts quando voce for converter seus arquivos ts converte para o EcmaScript 5...
         "target": "ES6",
         //programador, você diz que você quer que eu gere os arquivos na pasta "dist", que converta os arquivos TypeScript para ECMAScript 6, mas qual é os arquivos, onde estão os arquivos que você quer que eu leia?
-        "noEmitOnError": true //não vai gerar um arquivo js enquanto o ts estiver com problemas, evita de gerar um arquivo js com problemas
+        "noEmitOnError": true, //não vai gerar um arquivo js enquanto o ts estiver com problemas, evita de gerar um arquivo js com problemas
+        "noImplicitAny": true // para que não deixe criar variaveis implicitamente do tipo any 
     },
     //compilador, inclui aí para mim a pasta "app"
     "include": ["app/**/*"]
