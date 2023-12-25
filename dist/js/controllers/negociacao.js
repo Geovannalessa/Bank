@@ -1,13 +1,16 @@
 import { Negociacao } from "../models/models/negociacao.js";
+import { Negociacoes } from "../models/models/negociacoes.js";
 export class NegociacaoController {
     constructor() {
+        this.negociacoes = new Negociacoes;
         this.inputData = document.querySelector('#data');
         this.inputQuantidade = document.querySelector('#quantidade');
         this.inputValor = document.querySelector('#valor');
     }
     adiciona() {
         const negociacao = this.criaNegociacao();
-        console.log(negociacao);
+        this.negociacoes.adiciona(negociacao);
+        console.log(this.negociacoes.lista());
         this.limparFormulario();
     }
     criaNegociacao() {
@@ -21,6 +24,6 @@ export class NegociacaoController {
         this.inputData.value = '';
         this.inputQuantidade.value = '';
         this.inputValor.value = '';
-        this.inputData.focus();
+        this.inputData.focus(); //ele sabe q inputData é dp tipo elementHtml
     }
 }
